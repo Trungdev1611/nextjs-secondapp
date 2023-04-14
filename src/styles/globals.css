@@ -86,13 +86,14 @@ body {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+    font-size: 14px;
 }
 
 a {
@@ -104,4 +105,24 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+.container {
+  padding: 0 50px;
+  @media screen and (max-width: 550px) {
+    padding: 0 20px;
+}
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+};
+@media screen and (max-width: 400px) {
+  grid-template-columns: repeat(1, 1fr);
+}
 }
